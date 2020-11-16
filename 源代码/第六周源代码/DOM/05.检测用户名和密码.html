@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="text"  id="txtUserName"><br>
+    <input type="password"  id="txtPassWord"><br>
+    <input type="button" value="登 录" id="btnLogin">
+    <script>
+        var btnLogin = document.getElementById('btnLogin');
+        btnLogin.onclick = function () {
+            var txtUserName = document.getElementById('txtUserName');
+            var txtPassWord = document.getElementById('txtPassWord');
+            if(txtUserName.value.length < 3 || txtUserName.value.length > 6) {
+                txtUserName.className = 'background';
+                return;
+            } else {
+                txtUserName.className = '';
+            }
+
+            if(txtPassWord.value.length < 6 || txtPassWord.value.length > 8){
+                txtPassWord.className = 'background';
+                return;
+            } else {
+                txtPassWord.className = '';
+            }
+            console.log('执行登录');
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #time,p{
+            background-color: pink;
+            line-height: 30px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="获取当前时间" id="btn">
+    <div id="time">某个时间</div>
+    <p>当前时间</p>
+    <script>
+        var btn = document.getElementById('btn');
+        var time = document.getElementById('time');
+        btn.onclick = function () {
+            time.innerText = getDate();
+        }
+        function getDate() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var day = date.getDay();
+            return '今天是：' + year + '年' + month + '月' + dates + '日 ' + arr[day];
+        }
+        var p = document.querySelector('p');
+        p.innerText = getDate();
+    </script> 
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="mv">
+        <li>杨贵妃</li>
+        <li>貂蝉</li>
+        <li>西施</li>
+        <li>王昭君</li>
+    </ul>
+    <script>
+        var mv = document.getElementById('mv');
+        if(mv.hasChildNodes()){
+            for (var i = 0; i < mv.children.length; i++) {
+            li = mv.children[i];
+            if(i % 2 === 0) {
+                li.style.backgroundColor = 'pink';
+                li.style.width = '100px';
+            } else {
+                li.style.backgroundColor = 'blue';
+                li.style.width = '100px';
+            }
+          }
+        }
+    </script>
+    
+</body>
+</html>

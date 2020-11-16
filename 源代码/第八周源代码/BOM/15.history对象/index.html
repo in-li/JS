@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="list.html">去往下一个页面</a>
+    <button>前进</button>
+    <script>
+        var button = document.querySelector('button');
+        button.addEventListener('click', function(){
+            // history.forward();
+            history.go(1);
+        })
+    </script>
+</body>
+</html>

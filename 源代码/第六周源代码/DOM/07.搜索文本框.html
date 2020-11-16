@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gray{
+            color: gray;
+        }
+        .black{
+            color: black;
+        }
+    </style>
+    
+</head>
+<body>
+    <input type="text" value="请输入搜索关键词" id="txtSearch" class="gray">
+    <input type="button" id="btnSearch" value="搜索">
+
+    <script>
+        var txtSearch = document.getElementById('txtSearch');
+        txtSearch.onfocus = function () {
+            if(this.value === '请输入搜索关键词') {
+                this.value = '';
+                this.className = 'black';
+            }
+        }
+        txtSearch.onblur = function () {
+            if(this.value.length === 0 || this.value === '请输入搜索关键词'){
+                this.value = '请输入搜索关键词';
+                this.className = 'gray';
+            }
+        }
+    </script>
+</body>
+</html>
